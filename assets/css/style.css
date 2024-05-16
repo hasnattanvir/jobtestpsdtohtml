@@ -491,8 +491,12 @@ header.sticky .httrademenu {
 @media only screen and (min-width: 576px) {
   .header_top .htph {
     padding-bottom: 0px;
+  }
+  .header_top .htph .linebar {
+    padding-left: 22px;
+    margin-left: 0px;
     border-right: 1px solid #fff;
-    padding-right: 22px;
+    height: 21px;
   }
   .header_top .htph img {
     width: 18px;
@@ -522,7 +526,13 @@ header.sticky .httrademenu {
   transition: 0.4s;
 }
 .httrademenu .navbar {
-  padding-top: 18px 0px 13px 0px;
+  padding: 18px 0px 13px 0px;
+}
+@media only screen and (min-width: 1000px) {
+  .httrademenu .navbar .container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
 }
 .httrademenu .bg-lights {
   background: #ffffff;
@@ -539,8 +549,8 @@ header.sticky .httrademenu {
     width: 100%;
   }
 }
-.httrademenu .header_button .btn {
-  width: 50px !important;
+.httrademenu .header_button .gradin_btn {
+  width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -548,18 +558,23 @@ header.sticky .httrademenu {
   padding: 0px;
   min-width: 100%;
 }
-.httrademenu .header_button .btn span {
+.httrademenu .header_button .gradin_btn span {
   display: none;
 }
 @media only screen and (min-width: 1050px) {
-  .httrademenu .header_button .btn {
-    width: auto !important;
-    padding: 12px 18px;
+  .httrademenu .header_button .gradin_btn {
+    width: 180px;
+    padding: 12px 0px;
     height: auto !important;
   }
-  .httrademenu .header_button .btn span {
+  .httrademenu .header_button .gradin_btn span {
     display: block;
     margin-left: 2px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .httrademenu .header_button {
+    padding-left: 50px;
   }
 }
 .httrademenu .humbagur_icon {
@@ -570,6 +585,9 @@ header.sticky .httrademenu {
 }
 .httrademenu #menu:not(.mm-menu) {
   display: none;
+}
+.httrademenu .mm-ocd {
+  z-index: 9999999999 !important;
 }
 @media only screen and (min-width: 992px) {
   .httrademenu .humbagur_icon {
@@ -597,7 +615,7 @@ header.sticky .httrademenu {
   background-color: #fdbe00;
   display: none;
   position: absolute;
-  top: 40px;
+  top: 60px;
 }
 .httrademenu #desktopMenu li > a:hover {
   text-decoration: none;
@@ -609,7 +627,7 @@ header.sticky .httrademenu {
 }
 .httrademenu #desktopMenu li > ul > li > a {
   text-align: left;
-  padding: 10px 15px;
+  padding: 10px 17px;
   color: #ffffff;
 }
 .httrademenu #desktopMenu li > ul > li > a::after {
@@ -631,7 +649,7 @@ header.sticky .httrademenu {
     display: block;
   }
   .httrademenu #desktopMenu li {
-    padding: 0px 15px;
+    padding: 0px 14px;
   }
   .httrademenu #desktopMenu li:hover > a,
   .httrademenu #desktopMenu li.current-menu-item > a,
@@ -777,16 +795,21 @@ header.sticky .httrademenu {
 .bannar_section .bannar_content {
   color: #fff;
 }
+.bannar_section .bannar_content .h1 {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.2;
+}
 @media only screen and (min-width: 1100px) {
   .bannar_section .bannar_content .h1 {
     font-size: 64px;
   }
 }
 .bannar_section .bannar_content .h1 .blue {
-  color: #fdbe00;
+  color: #007dff;
 }
 .bannar_section .bannar_content .h1 .yellow {
-  color: #007dff;
+  color: #fdbe00;
 }
 .bannar_section .bannar_content p {
   font-size: 20px;
@@ -810,7 +833,7 @@ header.sticky .httrademenu {
   max-width: 100%;
 }
 .bannar_section .swiper-pagination {
-  bottom: 3px;
+  bottom: 10px;
 }
 @media only screen and (min-width: 768px) {
   .bannar_section .swiper-pagination {
@@ -829,8 +852,8 @@ header.sticky .httrademenu {
 }
 .bannar_section .swiper-pagination .swiper-pagination-bullet {
   border: 3px solid #fff;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   opacity: 1;
 }
 .bannar_section .swiper-pagination .swiper-pagination-bullet-active {
@@ -862,8 +885,6 @@ header.sticky .httrademenu {
   }
 }
 .quality_section .shdbox {
-  padding-top: 38px;
-  padding-bottom: 28px;
   width: 1166px;
   margin: auto;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
@@ -880,7 +901,11 @@ header.sticky .httrademenu {
 }
 .quality_section .item_box {
   width: 33.33%;
-  padding: 0px 20px;
+  padding: 38px 20px 10px 20px;
+  border-right: 1px solid rgba(231, 231, 231, 0.8588235294);
+}
+.quality_section .item_box:last-child {
+  border-right: 0px;
 }
 .quality_section .inner_box {
   margin: auto;
@@ -937,7 +962,7 @@ header.sticky .httrademenu {
   }
 }
 .quality_section .inner_box .text_box {
-  padding-top: 20px;
+  padding-top: 3px;
 }
 .quality_section .inner_box .text_box p {
   margin-bottom: 0px;
@@ -1043,8 +1068,14 @@ header.sticky .httrademenu {
   background-size: cover;
   background-position: center center;
 }
+@media only screen and (min-width: 1190px) {
+  .service_section .col-md-6:nth-child(even) .innerbox {
+    width: 100%;
+    padding-left: 100px;
+  }
+}
 .service_section .rgb_overlay {
-  padding: 25px 0px;
+  padding: 9px 0px;
   width: 100%;
   height: 100%;
   background-color: rgba(2, 14, 40, 0.8);
@@ -1059,7 +1090,7 @@ header.sticky .httrademenu {
   color: #fff;
   width: 470px;
   max-width: 100%;
-  padding: 25px 0px;
+  padding: 25px 0px 10px 0px;
 }
 .service_section .innerbox .icon_box {
   width: 120px;
@@ -1091,7 +1122,7 @@ header.sticky .httrademenu {
 .service_section .innerbox .h3 {
   color: #fff;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 .service_section .innerbox .h3 span {
   color: #fdbe00;
@@ -1321,7 +1352,7 @@ header.sticky .httrademenu {
 @media only screen and (min-width: 992px) {
   .request_section .ht_iner_box .rightbox {
     position: absolute;
-    padding: 50px 38px 38px 38px;
+    padding: 50px 38px 31px 38px;
   }
 }
 .request_section .ht_iner_box .rightbox .tilte_Box_underline h2, .request_section .ht_iner_box .rightbox .tilte_Box_underline .h2 {
@@ -1336,7 +1367,7 @@ header.sticky .httrademenu {
   border: 0px;
 }
 .request_section .ht_iner_box .rightbox p {
-  margin: 24px 0px;
+  margin: 10px 0px 17px 0px;
 }
 .request_section .ht_iner_box .rightbox .btn {
   font-weight: 700;
@@ -1420,7 +1451,7 @@ header.sticky .httrademenu {
 }
 @media only screen and (min-width: 576px) {
   .footer_sectoin .box_inner {
-    margin: auto;
+    margin: 0px;
   }
 }
 .footer_sectoin .about .about_inner {
