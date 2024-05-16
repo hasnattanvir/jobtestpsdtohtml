@@ -29,7 +29,7 @@ $(document).ready(function() {
   var swiper = new Swiper(".bannarslider", {
       slidesPerView: 1,
       spaceBetween: 30,
-      autoplay: true,
+      autoplay: false,
       loop: true,
       speed: 1000,
       effect: 'fade',
@@ -41,7 +41,6 @@ $(document).ready(function() {
           el: ".swiper-pagination",
           clickable: true,
       },
-      navigator:true,
   });
 });
 
