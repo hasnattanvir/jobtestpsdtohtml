@@ -522,13 +522,20 @@ header.sticky .httrademenu {
   }
 }
 
+.mm-ocd {
+  z-index: 9999999999 !important;
+}
+
 .httrademenu {
   transition: 0.4s;
 }
 .httrademenu .navbar {
-  padding: 18px 0px 13px 0px;
+  padding: 7px 0px 7px 0px;
 }
 @media only screen and (min-width: 1000px) {
+  .httrademenu .navbar {
+    padding: 18px 0px 13px 0px;
+  }
   .httrademenu .navbar .container {
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -542,16 +549,16 @@ header.sticky .httrademenu {
   max-width: 100%;
 }
 .httrademenu .logo img {
-  width: 80%;
+  width: 60%;
 }
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 1000px) {
   .httrademenu .logo img {
     width: 100%;
   }
 }
 .httrademenu .header_button .gradin_btn {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -561,7 +568,10 @@ header.sticky .httrademenu {
 .httrademenu .header_button .gradin_btn span {
   display: none;
 }
-@media only screen and (min-width: 1050px) {
+.httrademenu .header_button .gradin_btn img {
+  width: 52%;
+}
+@media only screen and (min-width: 1000px) {
   .httrademenu .header_button .gradin_btn {
     width: 180px;
     padding: 12px 0px;
@@ -570,6 +580,10 @@ header.sticky .httrademenu {
   .httrademenu .header_button .gradin_btn span {
     display: block;
     margin-left: 2px;
+  }
+  .httrademenu .header_button .gradin_btn img {
+    width: unset;
+    max-width: 22px;
   }
 }
 @media only screen and (min-width: 1100px) {
@@ -580,14 +594,16 @@ header.sticky .httrademenu {
 .httrademenu .humbagur_icon {
   display: block;
   padding: 8px 0px;
-  font-size: 30px;
+  font-size: 25px;
   margin-right: 15px;
+}
+@media only screen and (min-width: 1000px) {
+  .httrademenu .humbagur_icon {
+    font-size: 30px;
+  }
 }
 .httrademenu #menu:not(.mm-menu) {
   display: none;
-}
-.httrademenu .mm-ocd {
-  z-index: 9999999999 !important;
 }
 @media only screen and (min-width: 992px) {
   .httrademenu .humbagur_icon {
@@ -865,12 +881,18 @@ header.sticky .httrademenu {
 }
 
 .quality_section {
-  padding-top: 40px;
+  padding-top: 30px;
   padding-bottom: 20px;
   padding-left: 10px;
   padding-right: 10px;
   overflow-x: auto;
   overflow-y: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .quality_section {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
 }
 @media only screen and (min-width: 992px) {
   .quality_section {
@@ -970,8 +992,24 @@ header.sticky .httrademenu {
 }
 
 .htwhysection {
-  padding-top: 40px;
-  padding-bottom: 74px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media only screen and (min-width: 768px) {
+  .htwhysection {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .htwhysection {
+    padding-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .htwhysection {
+    padding-bottom: 74px;
+  }
 }
 .htwhysection .cur_box_bg {
   margin: auto;
@@ -1040,10 +1078,16 @@ header.sticky .httrademenu {
 .htwhysection .inner_text_box .h2 {
   position: relative;
   color: #004377;
-  margin-bottom: 40px;
-  margin-top: 40px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 @media only screen and (min-width: 768px) {
+  .htwhysection .inner_text_box .h2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
   .htwhysection .inner_text_box .h2 {
     margin-top: 25px;
   }
@@ -1061,6 +1105,7 @@ header.sticky .httrademenu {
 }
 .htwhysection .inner_text_box p {
   color: #101010;
+  margin-bottom: 0px;
 }
 
 .service_section {
@@ -1119,15 +1164,26 @@ header.sticky .httrademenu {
   width: 52px;
   height: auto;
 }
-.service_section .innerbox .h3 {
+.service_section .innerbox h3, .service_section .innerbox .h3 {
   color: #fff;
   position: relative;
   margin-bottom: 22px;
+  font-size: 20px;
 }
-.service_section .innerbox .h3 span {
+@media only screen and (min-width: 768px) {
+  .service_section .innerbox h3, .service_section .innerbox .h3 {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .service_section .innerbox h3, .service_section .innerbox .h3 {
+    font-size: 30px;
+  }
+}
+.service_section .innerbox h3 span, .service_section .innerbox .h3 span {
   color: #fdbe00;
 }
-.service_section .innerbox .h3::after {
+.service_section .innerbox h3::after, .service_section .innerbox .h3::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -1150,22 +1206,24 @@ header.sticky .httrademenu {
   color: #fdbe00;
 }
 
-.tilte_Box_underline .h2 {
+.tilte_Box_underline h2, .tilte_Box_underline .h2 {
   position: relative;
   color: #004377;
   margin-bottom: 0px;
   margin-top: 0px;
+  font-size: 22px;
 }
 @media only screen and (min-width: 768px) {
-  .tilte_Box_underline .h2 {
+  .tilte_Box_underline h2, .tilte_Box_underline .h2 {
     margin-bottom: 40px;
     margin-top: 40px;
+    font-size: 30px;
   }
 }
-.tilte_Box_underline .h2 span {
+.tilte_Box_underline h2 span, .tilte_Box_underline .h2 span {
   color: #fdbe00;
 }
-.tilte_Box_underline .h2::after {
+.tilte_Box_underline h2::after, .tilte_Box_underline .h2::after {
   position: absolute;
   content: "";
   width: 20%;
@@ -1195,7 +1253,12 @@ header.sticky .httrademenu {
   color: #004377;
 }
 .brand_section .brand_com_info {
-  padding: 15px 0px;
+  padding: 8px 0px;
+}
+@media only screen and (min-width: 768px) {
+  .brand_section .brand_com_info {
+    padding: 15px 0px;
+  }
 }
 .brand_section .brand_com_info p {
   color: #101010;
@@ -1370,10 +1433,18 @@ header.sticky .httrademenu {
   margin: 10px 0px 17px 0px;
 }
 .request_section .ht_iner_box .rightbox .btn {
-  font-weight: 700;
-  padding: 10px 15px;
+  font-weight: 600;
+  padding: 8px 10px;
+  font-size: 14px;
   width: auto;
   text-decoration: none;
+}
+@media only screen and (min-width: 768px) {
+  .request_section .ht_iner_box .rightbox .btn {
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 700;
+  }
 }
 
 .footer_sectoin .logo {
@@ -1393,6 +1464,12 @@ header.sticky .httrademenu {
   flex-wrap: wrap;
   color: #ffffff;
 }
+@media only screen and (min-width: 576px) {
+  .footer_sectoin .custom_row {
+    margin-right: -14px;
+    margin-left: -14px;
+  }
+}
 .footer_sectoin .custom_row p, .footer_sectoin .custom_row a, .footer_sectoin .custom_row span {
   font-size: 14px;
 }
@@ -1411,14 +1488,13 @@ header.sticky .httrademenu {
 }
 @media only screen and (min-width: 576px) {
   .footer_sectoin .custom_row .h5 {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 }
 .footer_sectoin .custom_row .about ul li {
   padding-right: 12px;
 }
 .footer_sectoin .box {
-  padding-right: 10px;
   padding-bottom: 20px;
 }
 .footer_sectoin .about, .footer_sectoin .touch, .footer_sectoin .links, .footer_sectoin .estimate {
@@ -1434,16 +1510,16 @@ header.sticky .httrademenu {
 }
 @media only screen and (min-width: 992px) {
   .footer_sectoin .about {
-    width: 25%;
+    width: 31%;
   }
   .footer_sectoin .touch {
-    width: 26%;
+    width: 23%;
   }
   .footer_sectoin .links {
-    width: 18%;
+    width: 23%;
   }
   .footer_sectoin .estimate {
-    width: 30%;
+    width: 20%;
   }
 }
 .footer_sectoin .box_inner {
@@ -1501,9 +1577,12 @@ header.sticky .httrademenu {
   width: 240px;
   max-width: 100%;
 }
+.footer_sectoin .estimate .estimate_inner p {
+  margin-bottom: 10px;
+}
 .footer_sectoin .estimate .gradin_btn {
   text-decoration: none;
-  padding: 12px 20px;
+  padding: 10px 30px;
   width: auto;
   min-width: auto;
 }
