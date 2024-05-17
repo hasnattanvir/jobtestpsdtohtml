@@ -414,9 +414,9 @@ td, th {
         color: $white;
         border: 0px;
         background: rgb(250,189,2);
-        background: -moz-linear-gradient(90deg, rgba(250,189,2,1) 0%, rgba(104,151,149,1) 35%, rgba(0,125,255,1) 100%);
-        background: -webkit-linear-gradient(90deg, rgba(250,189,2,1) 0%, rgba(104,151,149,1) 35%, rgba(0,125,255,1) 100%);
-        background: linear-gradient(90deg, rgba(250,189,2,1) 0%, rgba(104,151,149,1) 35%, rgba(0,125,255,1) 100%);
+        background: -moz-linear-gradient(114deg, rgba(250,189,2,1) 0%, rgba(104,151,149,1) 49%, rgba(0,125,255,1) 100%);
+        background: -webkit-linear-gradient(114deg, rgba(250,189,2,1) 0%, rgba(104,151,149,1) 49%, rgba(0,125,255,1) 100%);
+        background: linear-gradient(114deg, rgba(250,189,2,1) 0%, rgba(104,151,149,1) 49%, rgba(0,125,255,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fabd02",endColorstr="#007dff",GradientType=1);
         border-radius: 25px;
     }
@@ -464,7 +464,7 @@ header{
         flex-direction:column;
         a{
         @extend .poppins-regular;
-        color: $white;
+        color: #e1e1e1;
         font-size: 16px;
         text-decoration: none;
         display: inline-block;
@@ -491,7 +491,7 @@ header{
             .linebar{
                 padding-left:22px;
                 margin-left: 0px;
-                border-right: 1px solid #fff;
+                border-right: 1px solid #e1e1e1;
                 height: 21px;
             }
             img{
@@ -565,6 +565,9 @@ header{
             img{
                 width: 52%;
             }
+            &:hover{
+                text-decoration: none;
+            }
         }
         @include minwidth(1000px){
             .gradin_btn{
@@ -578,6 +581,9 @@ header{
                 img{
                     width: unset;
                     max-width: 22px;
+                    @include minwidth(1000px){
+                        margin-right: 5px;
+                    }
                 }
             }
         }
@@ -590,7 +596,10 @@ header{
         display: block;
         padding: 8px 0px;
         font-size: 25px;
-        margin-right: 15px;
+        margin-left: 15px;
+        i{
+            transform: rotate(180deg);
+        }
         @include  minwidth(1000px){
             font-size: 30px;
         }
@@ -638,6 +647,13 @@ header{
             &::after{
                display: block;
             }
+        }
+    }
+
+    #desktopMenu li>a.active {
+        color: $yellow !important;
+        &::after {
+            display: block;
         }
     }
 
@@ -842,7 +858,7 @@ header{
         z-index: 1
     }
     .bannar_content{
-        .h1{
+        .h1,.h2{
             @extend .poppins-bold;
             margin: 0px;
             padding: 0px;
@@ -862,6 +878,7 @@ header{
         p{
             @extend .poppins-regular;
             font-size: 20px;
+            line-height: 1.2;
             @include minwidth(992px){
                 font-size: 25px;
             }
@@ -898,7 +915,7 @@ header{
             opacity: 1;
         }
         .swiper-pagination-bullet-active{
-            background-color: #00000018;
+            background-color: $yellow;
         }
     }
     .bannarup {
@@ -928,12 +945,16 @@ header{
     overflow-x: auto;
     overflow-y: hidden;
     .shdbox{
-        width: 1166px;
+        width: fit-content;
+        @include minwidth(840px){
+            width: 1166px;
+        }
         margin: auto;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
         display: flex;
+     
     }
-    @include minwidth(750px){
+    @include minwidth(840px){
         overflow-x: unset;
         overflow-y: unset;
         .shdbox{
@@ -943,7 +964,10 @@ header{
 
 
     .item_box{
-        width: 33.33%;  
+        min-width: 270px;
+        @include minwidth(568px){
+            width: 33.33%; 
+        }
         padding: 38px 20px 10px 20px;
         border-right:1px solid #e7e7e7db;
         &:last-child{
@@ -955,8 +979,11 @@ header{
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         flex-direction: column;
+        @include minwidth(992px){
+            justify-content: space-between;
+        }
         .text{
            .h3{
             margin: 0px;
@@ -1049,6 +1076,28 @@ header{
         .img_wrapper_box{
             width: 270px;
             height: 270px;
+            border: 8px solid #fff;
+            border-radius: 50%;
+            transition: border-color 0.3s ease;
+
+            @keyframes borderColorChange {
+                0% {
+                  border-color: #fff;
+                }
+                33% {
+                  border-color: #fdbe00;
+                }
+                66% {
+                  border-color: #6798a7;
+                }
+                100% {
+                  border-color: #fdbe00;
+                }
+              }
+            
+              &:hover {
+                animation: borderColorChange 5s infinite;
+              }
             img{
                 width: 100%;
                 height: 100%;
@@ -1358,6 +1407,8 @@ header{
                     bottom: unset;
                     right: 155px;
                     left: unset;
+                    border-right: 4px solid #fff;
+                    border-bottom:4px solid #fff;
                     img{
                         width: 100%;
                         height: 100%;
@@ -1459,7 +1510,7 @@ header{
                 text-decoration: none;
                 @include minwidth(768px){
                     font-size: 16px;
-                    padding: 10px 15px;
+                    padding: 8px 15px;
                     font-weight: 700;
                 }
             }
@@ -1507,6 +1558,7 @@ header{
         }
         
         .h5{
+            font-weight: 500;
             margin-bottom: 10px;
             @include minwidth(576px){
                 margin-bottom: 24px;
@@ -1515,7 +1567,24 @@ header{
         .about{
             ul{
                 li{
-                    padding-right: 12px;
+                    margin-right: 12px;
+                    background-color: #000;
+                    width: 30px;
+                    height: 30px;
+                    transition: background-color 0.3s ease;
+                    a{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:hover{
+                        background-color: #ddb620;
+                        a{
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
         }

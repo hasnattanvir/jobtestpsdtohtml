@@ -35,7 +35,7 @@
   font-style: normal;
 }
 
-.poppins-bold, .bannar_section .bannar_content .h1, .httrademenu #desktopMenu li > a {
+.poppins-bold, .bannar_section .bannar_content .h1, .bannar_section .bannar_content .h2, .httrademenu #desktopMenu li > a {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -423,7 +423,7 @@ td, th {
   color: #ffffff;
   border: 0px;
   background: rgb(250, 189, 2);
-  background: linear-gradient(90deg, rgb(250, 189, 2) 0%, rgb(104, 151, 149) 35%, rgb(0, 125, 255) 100%);
+  background: linear-gradient(114deg, rgb(250, 189, 2) 0%, rgb(104, 151, 149) 49%, rgb(0, 125, 255) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fabd02",endColorstr="#007dff",GradientType=1);
   border-radius: 25px;
 }
@@ -465,7 +465,7 @@ header.sticky .httrademenu {
   flex-direction: column;
 }
 .header_top .hbox_wrapper a {
-  color: #ffffff;
+  color: #e1e1e1;
   font-size: 16px;
   text-decoration: none;
   display: inline-block;
@@ -495,7 +495,7 @@ header.sticky .httrademenu {
   .header_top .htph .linebar {
     padding-left: 22px;
     margin-left: 0px;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #e1e1e1;
     height: 21px;
   }
   .header_top .htph img {
@@ -571,6 +571,9 @@ header.sticky .httrademenu {
 .httrademenu .header_button .gradin_btn img {
   width: 52%;
 }
+.httrademenu .header_button .gradin_btn:hover {
+  text-decoration: none;
+}
 @media only screen and (min-width: 1000px) {
   .httrademenu .header_button .gradin_btn {
     width: 180px;
@@ -586,6 +589,11 @@ header.sticky .httrademenu {
     max-width: 22px;
   }
 }
+@media only screen and (min-width: 1000px) and (min-width: 1000px) {
+  .httrademenu .header_button .gradin_btn img {
+    margin-right: 5px;
+  }
+}
 @media only screen and (min-width: 1100px) {
   .httrademenu .header_button {
     padding-left: 50px;
@@ -595,7 +603,10 @@ header.sticky .httrademenu {
   display: block;
   padding: 8px 0px;
   font-size: 25px;
-  margin-right: 15px;
+  margin-left: 15px;
+}
+.httrademenu .humbagur_icon i {
+  transform: rotate(180deg);
 }
 @media only screen and (min-width: 1000px) {
   .httrademenu .humbagur_icon {
@@ -639,6 +650,12 @@ header.sticky .httrademenu {
   background-color: unset !important;
 }
 .httrademenu #desktopMenu li > a:hover::after {
+  display: block;
+}
+.httrademenu #desktopMenu li > a.active {
+  color: #fdbe00 !important;
+}
+.httrademenu #desktopMenu li > a.active::after {
   display: block;
 }
 .httrademenu #desktopMenu li > ul > li > a {
@@ -811,24 +828,25 @@ header.sticky .httrademenu {
 .bannar_section .bannar_content {
   color: #fff;
 }
-.bannar_section .bannar_content .h1 {
+.bannar_section .bannar_content .h1, .bannar_section .bannar_content .h2 {
   margin: 0px;
   padding: 0px;
   line-height: 1.2;
 }
 @media only screen and (min-width: 1100px) {
-  .bannar_section .bannar_content .h1 {
+  .bannar_section .bannar_content .h1, .bannar_section .bannar_content .h2 {
     font-size: 64px;
   }
 }
-.bannar_section .bannar_content .h1 .blue {
+.bannar_section .bannar_content .h1 .blue, .bannar_section .bannar_content .h2 .blue {
   color: #007dff;
 }
-.bannar_section .bannar_content .h1 .yellow {
+.bannar_section .bannar_content .h1 .yellow, .bannar_section .bannar_content .h2 .yellow {
   color: #fdbe00;
 }
 .bannar_section .bannar_content p {
   font-size: 20px;
+  line-height: 1.2;
 }
 @media only screen and (min-width: 992px) {
   .bannar_section .bannar_content p {
@@ -873,7 +891,7 @@ header.sticky .httrademenu {
   opacity: 1;
 }
 .bannar_section .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: rgba(0, 0, 0, 0.0941176471);
+  background-color: #fdbe00;
 }
 .bannar_section .bannarup {
   position: relative;
@@ -907,12 +925,18 @@ header.sticky .httrademenu {
   }
 }
 .quality_section .shdbox {
-  width: 1166px;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: auto;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
   display: flex;
 }
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 840px) {
+  .quality_section .shdbox {
+    width: 1166px;
+  }
+}
+@media only screen and (min-width: 840px) {
   .quality_section {
     overflow-x: unset;
     overflow-y: unset;
@@ -922,9 +946,14 @@ header.sticky .httrademenu {
   }
 }
 .quality_section .item_box {
-  width: 33.33%;
+  min-width: 270px;
   padding: 38px 20px 10px 20px;
   border-right: 1px solid rgba(231, 231, 231, 0.8588235294);
+}
+@media only screen and (min-width: 568px) {
+  .quality_section .item_box {
+    width: 33.33%;
+  }
 }
 .quality_section .item_box:last-child {
   border-right: 0px;
@@ -934,8 +963,12 @@ header.sticky .httrademenu {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+}
+@media only screen and (min-width: 992px) {
+  .quality_section .inner_box {
+    justify-content: space-between;
+  }
 }
 .quality_section .inner_box .text .h3 {
   margin: 0px;
@@ -1024,6 +1057,26 @@ header.sticky .httrademenu {
 .htwhysection .cur_box_bg .img_wrapper_box {
   width: 270px;
   height: 270px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  transition: border-color 0.3s ease;
+}
+@keyframes borderColorChange {
+  0% {
+    border-color: #fff;
+  }
+  33% {
+    border-color: #fdbe00;
+  }
+  66% {
+    border-color: #6798a7;
+  }
+  100% {
+    border-color: #fdbe00;
+  }
+}
+.htwhysection .cur_box_bg .img_wrapper_box:hover {
+  animation: borderColorChange 5s infinite;
 }
 .htwhysection .cur_box_bg .img_wrapper_box img {
   width: 100%;
@@ -1332,6 +1385,8 @@ header.sticky .httrademenu {
     bottom: unset;
     right: 155px;
     left: unset;
+    border-right: 4px solid #fff;
+    border-bottom: 4px solid #fff;
   }
   .brand_section .inner_img_box .img_back .img_font img {
     width: 100%;
@@ -1442,7 +1497,7 @@ header.sticky .httrademenu {
 @media only screen and (min-width: 768px) {
   .request_section .ht_iner_box .rightbox .btn {
     font-size: 16px;
-    padding: 10px 15px;
+    padding: 8px 15px;
     font-weight: 700;
   }
 }
@@ -1484,6 +1539,7 @@ header.sticky .httrademenu {
   list-style: none;
 }
 .footer_sectoin .custom_row .h5 {
+  font-weight: 500;
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 576px) {
@@ -1492,7 +1548,24 @@ header.sticky .httrademenu {
   }
 }
 .footer_sectoin .custom_row .about ul li {
-  padding-right: 12px;
+  margin-right: 12px;
+  background-color: #000;
+  width: 30px;
+  height: 30px;
+  transition: background-color 0.3s ease;
+}
+.footer_sectoin .custom_row .about ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.footer_sectoin .custom_row .about ul li:hover {
+  background-color: #ddb620;
+}
+.footer_sectoin .custom_row .about ul li:hover a {
+  text-decoration: none;
 }
 .footer_sectoin .box {
   padding-bottom: 20px;
